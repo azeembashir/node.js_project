@@ -7,6 +7,9 @@ const db = require('./db');
 
 const app = express()
 
+// importing .env file
+require('dotenv').config();
+
 
 
 
@@ -15,7 +18,8 @@ const app = express()
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());                 //then it store data in req body
 
-
+//process .env file or port
+const PORT = process.env.PORT || 3000;
 
 
 
@@ -46,7 +50,7 @@ app.use('/menuitem', menuItemsRoutes);
 
 
 
-app.listen(3000, ()=> console.log('listening on port 3000'));
+app.listen(PORT, ()=> console.log('listening on port 3000'));
 
 
 
