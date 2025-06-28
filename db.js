@@ -7,6 +7,7 @@ require('dotenv').config();
 // online mongodb atlas url
 const mongoUrl = process.env.MONGODB_URL;
 
+
 // setup mongodb connection
 mongoose.connect(mongoUrl);
 
